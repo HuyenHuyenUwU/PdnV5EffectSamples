@@ -1,0 +1,12 @@
+## Giải thích file 'lama_fp32.onnx':
+
+- Nguồn: https://github.com/Ramwsh221282/Lama_Onnx_Inference
+- Chứa:
+	- toàn bộ weights (trọng số pretrained)
+	- kiến trúc mạng neural (CNN + Fourier layers) 
+	- pipeline xử lý ảnh
+- Tại sao cần? 
+	- Không dung đc PyTorch trong C#
+	- LaMa nó dung torch.fft, mà hnhu cái đó onnx ko support đầy đủ, rất KHÓ export thủ công 
+
+- Cách dùng: xuất hiện trong file inference_lama.py bang câu lệnh 'session = ort.InferenceSession("lama_fp32.onnx")' (lệnh này để load model)

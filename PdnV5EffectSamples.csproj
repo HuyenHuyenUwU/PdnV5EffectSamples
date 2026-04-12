@@ -4,6 +4,7 @@
          Store version, you should download the portable version and point this at that. -->
     <PdnRoot>D:\DevTools\PaintDotNet</PdnRoot>
   </PropertyGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0-windows</TargetFramework>
     <RootNamespace>PaintDotNet.Effects.Samples</RootNamespace>
@@ -11,6 +12,10 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>    
+    <OutputType>Library</OutputType> 
+
+    <PlatformTarget>x64</PlatformTarget>   <!-- ép về x64 -->
+    <Platforms>x64</Platforms> 
     <!-- This is necessary so that the build copies the version of nuget packages we're referencing,
          instead of copying the ones that Paint.NET is using (which may be trimmed and/or a different version) -->
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
